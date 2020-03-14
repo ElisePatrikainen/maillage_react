@@ -1,0 +1,56 @@
+#body {
+    position: relative;
+    background-color: var(--colored-background);
+}
+
+#background-img-top, #background-img-bottom {
+    position: absolute;
+    width: 100%;    
+    opacity: 0.5;
+    object-fit: cover;
+}
+
+#background-img-top {
+    top: 0;
+    height: 13rem;
+}
+
+#background-img-bottom {
+    bottom: 0;
+    height: 20rem;
+}
+
+#main-cont {
+    display: flex;
+    position: relative;
+}
+
+#main, #side {
+    margin: 2rem !important;
+    line-height: 1.7;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+}
+
+#side {
+    display: none;
+    /* to remove */
+    min-height: 300px;
+}
+
+#main {
+    /* to remove */
+    min-height: 1200px;
+    width: 80%;
+}
+
+@media (min-width: 800px) {
+
+    #side {
+        display: block;
+        width: 25%;
+    }
+
+}
