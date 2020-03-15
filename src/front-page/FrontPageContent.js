@@ -1,6 +1,6 @@
 import React from 'react';
 import './FrontPageContent.css';
-import Image1 from './front1bis.jpg'
+import Image1 from '../assets/front1bis.jpg'
 
 const content = (
     <div>

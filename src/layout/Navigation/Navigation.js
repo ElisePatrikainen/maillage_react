@@ -1,53 +1,59 @@
 import React from 'react';
 import './Navigation.css';
+import {NavLink} from "react-router-dom";
+import Logo from "../../logo.png";
 
 const content = (
-  <nav>
-    <div className="mobile">
-      <button onclick="openNavMenu()">Open</button>
+    <nav>
+        <div className="mobile">
+            <button onClick="openNavMenu()">Open</button>
 
-      <div id="mobile-nav-menu">
-        <button id="nav-close" onclick="closeNavMenu()">
-          X
-        </button>
-        <span className="nav-element nav-2-selected">
+            <div id="mobile-nav-menu">
+                <button id="nav-close" onClick="closeNavMenu()">
+                    X
+                </button>
+                <span className="nav-element nav-2-selected">
           <span>Nos métiers</span>
         </span>
-        <span className="nav-element">
+                <span className="nav-element">
           <span>Notre charte</span>
         </span>
-        <span className="nav-element">
+                <span className="nav-element">
           <span>Qui sommes-nous ?</span>
         </span>
-        <span className="nav-element">
+                <span className="nav-element">
           <span>Associations partenaires</span>
         </span>
-      </div>
-    </div>
+            </div>
+        </div>
 
-    <div id="large-nav-menu" className="large">
-      <a id="nav-home" href="./index.html">
-        <img className="logo" src="logo.png" />
-        <span>Maillage</span>
-      </a>
+        <div id="large-nav-menu" className="large">
+            <ul>
+                <li id="nav-home">
+                    <img className="logo" src={Logo}/>
+                    <NavLink to="/">Maillage</NavLink>
+                </li>
 
-      <div>
-        <a className="nav-element nav-2-selected">
-          <span>Nos métiers</span>
-        </a>
-        <a className="nav-element">
-          <span>Notre charte</span>
-        </a>
+                <li>
+                    <ul>
+                        <li className="nav-element nav-2-selected">
+                            <NavLink to="/metiers">Nos métiers</NavLink>
+                        </li>
+                        <li className="nav-element">
+                            <NavLink to="/charte">Notre charte</NavLink>
+                        </li>
 
-        <a className="nav-element">
-          <span>Qui sommes-nous ?</span>
-        </a>
-        <a className="nav-element">
-          <span>Associations partenaires</span>
-        </a>
-      </div>
-    </div>
-  </nav>
+                        <li className="nav-element">
+                            <NavLink to="/equipe">Qui sommes-nous ?</NavLink>
+                        </li>
+                        <li className="nav-element">
+                            <NavLink to="/partenaires">Associations partenaires</NavLink>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
 );
 
 function Navigation(prop) {

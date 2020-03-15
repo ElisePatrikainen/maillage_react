@@ -1,42 +1,50 @@
 import React from 'react';
 import Navigation from "../Navigation/Navigation";
 import './PageBody.css';
+import Image1 from '../../assets/front1bis.jpg';
+import {useParams} from 'react-router-dom';
+import Psychologue from "../../posts/Psychologue";
 
-const content = (
-  <div>
-    <img id="background-img-top" src="front1bis.jpg" />
-    <Navigation />
+function choosePost(constantKey) {
+    switch (constantKey) {
+        case 'psychologue': return (<Psychologue/>); break;
+        default: return (<h2>{constantKey}</h2>);
+    }
+}
 
-    <div id="main-cont">
-        
-    <div id="side">
+function PageBody() {
+    let {constantKey} = useParams()
+    console.log('key', constantKey);
+    return (
+        <div id="top-cont">
+            <img id="background-img-top" src={Image1}/>
+            <Navigation/>
 
-        {/* <SideSection/>
+            <div id="main-cont">
+
+                <div id="side">
+
+                    {/* <SideSection/>
         <SideSection/> */}
 
-    </div>
+                </div>
 
-    
-    <div id="main">
-        <div>
-            {/* <SectionText textId="psychologue"/>
-            <SectionText textId="psychologue2" background="colored"/> */}
+
+                <div id="main">
+                    <div>{choosePost(constantKey)}
+                    </div>
+
+                    <div>
+                        {/* <SectionCarrousel category="psychologists"/> */}
+                    </div>
+
+                </div>
+
+            </div>
+
+            <img id="background-img-bottom" src={Image1}/>
         </div>
-
-        <div>
-            {/* <SectionCarrousel category="psychologists"/> */}
-        </div>
-
-    </div>
-
-    </div>
-
-    <img id="background-img-bottom" src="front1bis.jpg" />
-  </div>
-);
-
-function PageBody(props) {
-    return content;
+    );
 }
 
 export default PageBody;

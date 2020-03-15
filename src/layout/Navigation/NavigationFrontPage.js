@@ -1,10 +1,10 @@
 import React from "react";
 import "./NavigationFrontPage.css";
 import Logo from "../../logo.png";
-import Navlink, { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const content = (
-  <nav>
+  <nav id="fp">
     <div className="mobile">
       <button>Open</button>
 

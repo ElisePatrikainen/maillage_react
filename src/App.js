@@ -9,18 +9,10 @@ function App() {
     <div>
       <Router>
         <Switch>
-          <Route exact path="/metiers">
+          <Route exact path="/:constantKey">
             <PageBody />
           </Route>
-          <Route exact path="/charte">
-            <PageBody />
-          </Route>
-          <Route exact path="/equipe">
-            <PageBody />
-          </Route>
-          <Route exact path="/partenaires">
-            <PageBody />
-          </Route>
+
           <Route exact path="/">
             <FrontPageBody />
           </Route>
