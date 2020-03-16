@@ -1,11 +1,11 @@
 import React from 'react';
 import './FrontPageContent.css';
-import Image1 from '../assets/front1bis.jpg'
+import Image1 from '../assets/images/front1bis.jpg'
 
 const content = (
     <div>
 
-    <div id="section-1" className="section">
+    <div id="section-1" className="fp-section">
         <div className="with-large-image">
             <img src={Image1}/>
             <div className="text">
@@ -15,7 +15,7 @@ const content = (
         </div>
     </div>
 
-    <div id="section-2" className="section">
+    <div id="section-2" className="fp-section">
         <h1>Notre ambition</h1>
         <div id="section-2-images">
             <div className="image-cont">
@@ -40,7 +40,7 @@ const content = (
         <button>En savoir plus</button>
     </div>
 
-    <div id="section-3" className="section">
+    <div id="section-3" className="fp-section">
         <h1>Notre organisation</h1>
         <div className="with-large-image">
             <img src={Image1}/>

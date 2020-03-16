@@ -2,3 +2,7 @@
   --logo-blue: #217dc0;
   --nav-color: #6a81af;
 }
+
+button {
+  cursor: pointer;
+}

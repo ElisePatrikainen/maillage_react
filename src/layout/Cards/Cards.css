@@ -1,0 +1,32 @@
+.cards {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-button {
+    display: block;
+    margin: auto;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 10px 35px;
+    border-radius: 10px;
+    color: var(--titles-second-color);
+    background-color: var(--test);
+}
+
+.cards-button span {
+    margin-right: 0.8rem;
+}
+
+@media (min-width: 950px) {
+
+    .cards {
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+}

@@ -1,14 +1,14 @@
-.section {
+.fp-section {
     position: relative;
     padding-bottom: 3rem;
 }
 
-.section h1 {
+.fp-section h1 {
     text-align: center;
-    padding: 2rem auto;
+    padding: 2rem 0;
 }
 
-.section button {
+.fp-section button {
     background-color: #adadad;
     border-radius: 20px;
     padding: 1rem 3rem;
@@ -21,7 +21,7 @@
     transform: translateX(65%);
 }
 
-/* section 1 */
+/* fp-section 1 */
 
 .with-large-image {
     position: relative;

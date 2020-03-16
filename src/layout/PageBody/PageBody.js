@@ -1,20 +1,19 @@
 import React from 'react';
 import Navigation from "../Navigation/Navigation";
 import './PageBody.css';
-import Image1 from '../../assets/front1bis.jpg';
+import Image1 from '../../assets/images/front1bis.jpg';
 import {useParams} from 'react-router-dom';
-import Psychologue from "../../posts/Psychologue";
+import Psychologists from "../../posts/Psychologists";
 
 function choosePost(constantKey) {
     switch (constantKey) {
-        case 'psychologue': return (<Psychologue/>); break;
+        case 'psychologue': return (<Psychologists/>); break;
         default: return (<h2>{constantKey}</h2>);
     }
 }
 
 function PageBody() {
-    let {constantKey} = useParams()
-    console.log('key', constantKey);
+    let {constantKey} = useParams();
     return (
         <div id="top-cont">
             <img id="background-img-top" src={Image1}/>
