@@ -3,9 +3,9 @@
     padding-bottom: 3rem;
 }
 
-.fp-section h1 {
-    text-align: center;
-    padding: 2rem 0;
+.h1-cont {
+    display: flex;
+    justify-content: center;
 }
 
 .fp-section button {

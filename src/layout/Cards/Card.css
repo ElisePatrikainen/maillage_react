@@ -42,4 +42,8 @@
         width: 20%;
         min-width: 250px;
     }
+
+    .card.large {
+        width: 30%;
+    }
 }

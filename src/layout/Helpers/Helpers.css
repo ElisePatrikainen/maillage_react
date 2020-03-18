@@ -1,0 +1,8 @@
+.before-title {
+    font-size: 2rem;
+    position: relative;
+    color: var(--logo-blue);
+    font-weight: bold;
+    margin-right: 1rem;
+    z-index: 1;
+}

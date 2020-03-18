@@ -1,6 +1,9 @@
 import React from 'react';
 import './FrontPageContent.css';
-import Image1 from '../assets/images/front1bis.jpg'
+import Image1 from '../assets/images/front1bis.jpg';
+import Card from "../layout/Cards/Card";
+import cards_data from "../assets/data/frontPage";
+
 
 const content = (
     <div>
@@ -16,32 +19,21 @@ const content = (
     </div>
 
     <div id="section-2" className="fp-section">
-        <h1>Notre ambition</h1>
+        <div className="h1-cont">
+            <h1>Notre organisation</h1>
+        </div>
         <div id="section-2-images">
-            <div className="image-cont">
-                <img src={Image1}/>
-                <div className="text">
-                    => Présenter différentes professions aux utilisateurs
-                </div>
-            </div>
-            <div className="image-cont">
-                <img src={Image1}/>
-                <div className="text">
-                    => Regrouper des professionnels attentifs à l'écoute et au suivi singulier des personnes
-                </div>
-            </div>
-            <div className="image-cont">
-                <img src={Image1}/>
-                <div className="text">
-                    => Favoriser la réflexion et faciliter des liens
-                </div>
+            <div className="cards">
+                {cards_data.map((detail) => (<Card data={detail} large={true}/>))}
             </div>
         </div>
         <button>En savoir plus</button>
     </div>
 
     <div id="section-3" className="fp-section">
-        <h1>Notre organisation</h1>
+        <div className="h1-cont">
+            <h1>Notre organisation</h1>
+        </div>
         <div className="with-large-image">
             <img src={Image1}/>
             <div className="text">
@@ -68,9 +60,9 @@ const content = (
     </footer>
     </div>
 
-)
+);
 
-function FrontPageContent(prop) {
+function FrontPageContent() {
     return content;
 }
 

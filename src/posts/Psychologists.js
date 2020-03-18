@@ -1,13 +1,13 @@
 import React from "react";
-import { PageH2Before } from "../layout/LayoutElements";
+import { PageH2Before } from "../layout/Helpers/Helpers";
 import Cards from "../layout/Cards/Cards";
-import db_data from "../assets/data/psychologists";
+import cards_data from "../assets/data/psychologists";
 
 
 function Psychologists() {
 
     const title = "psychologues";
-    const _data = db_data;
+    const _data = cards_data;
 
     return (
         <div>
@@ -16,8 +16,8 @@ function Psychologists() {
 
                 <div className="section colored-background text">
                     <h2>
-                        <span className="before-title"><PageH2Before/></span>Qu'est-ce qu'un
-                        <span className="bold"> psychologue</span> ?
+                        <PageH2Before/>
+                        Qu'est-ce qu'un<span className="bold"> psychologue</span> ?
                     </h2>
                     <p>
                         L’usage du titre professionnel de psychologue est réglementé en
@@ -44,8 +44,8 @@ function Psychologists() {
 
                 <div className="section text">
                     <h2>
-                        <span className="before-title"><PageH2Before/></span>Le psychologue
-                        <span className="bold"> clinicien</span> :
+                        <PageH2Before/>
+                        Le psychologue<span className="bold"> clinicien</span> :
                     </h2>
                     <p>
                         Les études de psychologie comprennent des spécialisations

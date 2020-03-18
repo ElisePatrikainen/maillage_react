@@ -1,4 +1,4 @@
-const db_data = [
+const cards_data = [
     {
         name: "Graz",
         firstName: "Geneviève",
@@ -12,6 +12,6 @@ const db_data = [
         firstName: "Geneviève",
         description: "Psychologue - psychanalyste"
     }
-]
+];
 
-export default db_data;
+export default cards_data;
