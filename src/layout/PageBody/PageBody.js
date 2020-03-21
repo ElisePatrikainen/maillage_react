@@ -5,11 +5,13 @@ import Image1 from '../../assets/images/front1bis.jpg';
 import {useParams} from 'react-router-dom';
 import Psychologists from "../../posts/Psychologists";
 import Argumentary from "../../posts/Argumentary";
+import Chart from "../../posts/Chart";
 
 function choosePost(constantKey) {
     switch (constantKey) {
         case 'psychologue': return (<Psychologists/>); break;
         case 'argumentaire': return (<Argumentary/>); break;
+        case 'charte': return (<Chart/>); break;
         default: return (<h2>{constantKey}</h2>);
     }
 }
