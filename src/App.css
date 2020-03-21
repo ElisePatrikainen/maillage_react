@@ -23,3 +23,8 @@ h1::before {
   background-color: #ced9e4;
   color: black;
 }
+
+a {
+  color: unset;
+  text-decoration: none;
+}

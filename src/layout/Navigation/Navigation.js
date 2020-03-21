@@ -6,10 +6,10 @@ import Logo from "../../logo.png";
 const content = (
     <nav>
         <div className="mobile">
-            <button onClick="openNavMenu()">Open</button>
+            <button>Open</button>
 
             <div id="mobile-nav-menu">
-                <button id="nav-close" onClick="closeNavMenu()">
+                <button id="nav-close">
                     X
                 </button>
                 <span className="nav-element nav-2-selected">
