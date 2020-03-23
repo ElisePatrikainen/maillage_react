@@ -1,12 +1,12 @@
 import React from "react";
 import "./FrontPageBody.css";
-import NavigationFrontPage from "../Navigation/NavigationFrontPage";
 import FrontPageContent from "../../front-page/FrontPageContent";
+import Navigation from "../Navigation/Navigation";
 
 const content = (
   <div id="fp-top-cont">
     <div id="fp-right-band"></div>
-    <NavigationFrontPage/>
+    <Navigation isFrontPage="true"/>
     <div id="fp-main">
       <FrontPageContent/>
     </div>

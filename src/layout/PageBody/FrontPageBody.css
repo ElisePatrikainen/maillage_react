@@ -1,4 +1,4 @@
-nav, #fp-main, footer {
+#fp-main, footer {
     position: relative;
     z-index: 1;
 }
@@ -12,7 +12,7 @@ nav, #fp-main, footer {
 #fp-top-cont {
     position: relative;
     font-family: 'Open-sans', sans-serif;
-    width: 90%;
+    width: 100%;
     margin: auto;
     border-left: #0000004a solid;
 }

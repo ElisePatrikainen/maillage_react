@@ -1,6 +1,6 @@
 import React from 'react';
 import './FrontPageContent.css';
-import Image1 from '../assets/images/front1bis.jpg';
+import Image1 from '../assets/images/hero.jpeg';
 import Card from "../layout/Cards/Card";
 import cards_data from "../assets/data/frontPage";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";

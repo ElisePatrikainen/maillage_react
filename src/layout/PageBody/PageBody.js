@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from "../Navigation/Navigation";
 import './PageBody.css';
-import Image1 from '../../assets/images/front1bis.jpg';
+import Image1 from '../../assets/images/hero.jpeg';
 import {useParams} from 'react-router-dom';
 import Psychologists from "../../posts/Psychologists";
 import Argumentary from "../../posts/Argumentary";
