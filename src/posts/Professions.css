@@ -1,0 +1,21 @@
+#professions .section-content {
+    display: flex;
+    padding: 2rem;
+}
+
+#professions .section-content > div {
+    width: 50%;
+}
+
+#professions .section-image img {
+    width: 80%;
+    margin: auto;
+}
+
+#professions button {
+    display: block;
+}
+
+#professions h1 {
+    margin: 2rem auto;
+}

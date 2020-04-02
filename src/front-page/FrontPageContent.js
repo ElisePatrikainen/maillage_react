@@ -1,15 +1,19 @@
 import React from 'react';
 import './FrontPageContent.css';
-import Image1 from '../assets/images/hero.jpeg';
+import Image1 from '../assets/images/front_test.jpg';
+import Image2 from '../assets/images/front2.jpg';
 import Card from "../layout/Cards/Card";
 import cards_data from "../assets/data/frontPage";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPlayCircle} from "@fortawesome/free-solid-svg-icons";
-import { useHistory } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 function FrontPageContent() {
     const history = useHistory();
     const navigate = (path) => history.push(path);
+
+    const therapyProfessions = ['psychiatre', 'psychologue', 'art thérapeute', 'ergothérapeute', 'psychanalyste']
+        .map((el) => (<button className="list-button">{el}</button>));
     return (
         <div>
 
@@ -35,29 +39,51 @@ function FrontPageContent() {
             </div>
 
             <div id="section-2" className="fp-section">
-                <div className="h1-cont">
-                    <h1>Notre organisation</h1>
-                </div>
                 <div id="section-2-images">
                     <div className="cards">
                         {cards_data.map((detail) => (<Card data={detail} large={true}/>))}
                     </div>
                 </div>
-                <button className="section-button">En savoir plus</button>
             </div>
 
             <div id="section-3" className="fp-section">
-                <div className="h1-cont">
-                    <h1>Notre organisation</h1>
-                </div>
                 <div className="with-large-image">
-                    <img src={Image1}/>
+                    <img src={Image2}/>
                     <div className="text">
-                        <div>Réseau de professionnels indépendants dédié au handicap psychique</div>
-                        <div>Soin, aide, accompagnement : trouvez le professionnel adapté.</div>
+                        <div>Soin, aide, accompagnement</div>
+                        <div>Trouvez le professionnel adapté !</div>
                     </div>
                 </div>
-                <button className="section-button">Bienvenue sur Maillage</button>
+            </div>
+
+
+            <div id="section-4" className="fp-section">
+                <div className="h1-cont">
+                    <h1>Nos métiers</h1>
+                </div>
+                <div className="list-section">
+                    <div className="list-container">
+                        <h2>Thérapie</h2>
+                        <div className="cards">
+                            {therapyProfessions}
+                        </div>
+                        <h2>Aide et thérapie sociale :</h2>
+                        <div className="cards">
+                            {therapyProfessions}
+                        </div>
+                        <h2>Thérapie</h2>
+                        <div className="cards">
+                            {therapyProfessions}
+                        </div>
+                    </div>
+                    <div className="images-container">
+                        <div className="image"></div>
+                        <div className="vertical-images">
+                            <div className="image"></div>
+                            <div className="image"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <footer>

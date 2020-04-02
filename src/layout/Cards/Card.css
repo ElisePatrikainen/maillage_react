@@ -1,10 +1,16 @@
 .card {
     border-radius: 5px;
     overflow: hidden;
-    height: 20rem;
     width: 80%;
     margin-bottom: 2rem;
-    background-color: var(--test);
+    background-color: white;
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: #a6a7b4 0px 1px 20px 0px;
 }
 
 .card .title {
@@ -12,14 +18,27 @@
     position: relative;
 }
 
+.card svg {
+    height: 250px;
+    margin: 2rem auto;
+}
+
+.card h1 {
+    font-weight: lighter;
+    margin: -2rem 2rem 0 2rem;
+}
+
+.card h1:before {
+    opacity: 0.5;
+}
+
 .card h3 {
     position: absolute;
-    left: 1.5rem;
-    font-size: 1.6rem;
+    left: 2rem;
     bottom: 0;
     margin: 0;
-    font-family: 'Raleway', sans-serif;
-    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
@@ -30,7 +49,7 @@
 }
 
 .card .description {
-    padding: 1rem;
+    padding: 1rem 2rem 2rem 2rem;
     font-weight: bold;
     color: grey;
     display: block;

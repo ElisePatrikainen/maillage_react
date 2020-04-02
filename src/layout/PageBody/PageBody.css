@@ -30,7 +30,7 @@
 }
 
 #main, #side {
-    margin: 2rem !important;
+    margin: 7rem 2rem 2rem 2rem !important;
     line-height: 1.7;
     border-radius: 10px;
     position: relative;

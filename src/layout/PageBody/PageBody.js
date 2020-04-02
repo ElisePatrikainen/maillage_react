@@ -6,12 +6,21 @@ import {useParams} from 'react-router-dom';
 import Psychologists from "../../posts/Psychologists";
 import Argumentary from "../../posts/Argumentary";
 import Chart from "../../posts/Chart";
+import Professions from "../../posts/Professions";
+import Project from "../../posts/Project";
+import Network from "../../posts/Network";
+import Ambition from "../../posts/Ambition";
 
+// todo: in a service
 function choosePost(constantKey) {
     switch (constantKey) {
-        case 'psychologue': return (<Psychologists/>); break;
-        case 'argumentaire': return (<Argumentary/>); break;
-        case 'charte': return (<Chart/>); break;
+        case 'psychologue': return (<Psychologists/>);
+        case 'argumentaire': return (<Argumentary/>);
+        case 'metiers': return (<Professions/>);
+        case 'charte': return (<Chart/>);
+        case 'projet': return (<Project/>);
+        case 'reseau': return (<Network/>);
+        case 'ambition': return (<Ambition/>);
         default: return (<h2>{constantKey}</h2>);
     }
 }
