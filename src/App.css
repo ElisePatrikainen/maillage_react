@@ -1,6 +1,7 @@
 :root {
   --logo-blue: #217dc0;
   --nav-color: #6a81af;
+  --dark-blue: #1f232f;
 }
 
 button {
@@ -42,4 +43,12 @@ h1::before {
 a {
   color: unset;
   text-decoration: none;
+}
+
+.block {
+  display: block;
+}
+
+button:hover {
+  transition: all 0.3s ease-in-out;
 }

@@ -49,7 +49,7 @@ class Navigation extends React.Component {
           <span>Qui sommes-nous ?</span>
         </span>
                         <span className="nav-element">
-          <span>Associations partenaires</span>
+          <span>Partenaires</span>
         </span>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ class Navigation extends React.Component {
                                     <NavLink to="/equipe">Qui sommes-nous ?</NavLink>
                                 </li>
                                 <li className="nav-element">
-                                    <NavLink to="/partenaires">Associations partenaires</NavLink>
+                                    <NavLink to="/partenaires">Partenaires</NavLink>
                                 </li>
                             </ul>
                         </li>

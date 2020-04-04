@@ -7,13 +7,12 @@ import cards_data from "../assets/data/frontPage";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPlayCircle} from "@fortawesome/free-solid-svg-icons";
 import {useHistory} from "react-router-dom";
+import FPProfessions from "./FPProfessions/FPProfessions";
 
 function FrontPageContent() {
     const history = useHistory();
     const navigate = (path) => history.push(path);
 
-    const therapyProfessions = ['psychiatre', 'psychologue', 'art thérapeute', 'ergothérapeute', 'psychanalyste']
-        .map((el) => (<button className="list-button">{el}</button>));
     return (
         <div>
 
@@ -50,41 +49,16 @@ function FrontPageContent() {
                 <div className="with-large-image">
                     <img src={Image2}/>
                     <div className="text">
-                        <div>Soin, aide, accompagnement</div>
-                        <div>Trouvez le professionnel adapté !</div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div id="section-4" className="fp-section">
-                <div className="h1-cont">
-                    <h1>Nos métiers</h1>
-                </div>
-                <div className="list-section">
-                    <div className="list-container">
-                        <h2>Thérapie</h2>
-                        <div className="cards">
-                            {therapyProfessions}
-                        </div>
-                        <h2>Aide et thérapie sociale :</h2>
-                        <div className="cards">
-                            {therapyProfessions}
-                        </div>
-                        <h2>Thérapie</h2>
-                        <div className="cards">
-                            {therapyProfessions}
-                        </div>
-                    </div>
-                    <div className="images-container">
-                        <div className="image"></div>
-                        <div className="vertical-images">
-                            <div className="image"></div>
-                            <div className="image"></div>
+                        <div className="title">
+                            <div>Soin, aide, accompagnement</div>
+                            <span>Trouvez le</span>
+                            <h1> professionnel adapté !</h1>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <FPProfessions/>
 
             <footer>
                 <ul>
