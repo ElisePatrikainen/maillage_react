@@ -18,4 +18,28 @@ const cards_data = [
     }
 ];
 
-export default cards_data;
+const cards_data_profiles = [
+    {
+        name: "Graz",
+        firstName: "Geneviève",
+        description: "Psychologue - psychanalyste",
+        image: "portrait"
+    }, {
+        name: "Graz",
+        firstName: "Geneviève",
+        description: "Psychologue - psychanalyste",
+        image: "portrait"
+    }, {
+        name: "Graz",
+        firstName: "Geneviève",
+        description: "Psychologue - psychanalyste",
+        image: "portrait"
+    }, {
+        name: "Graz",
+        firstName: "Geneviève",
+        description: "Psychologue - psychanalyste",
+        image: "portrait"
+    }
+];
+
+export {cards_data, cards_data_profiles};

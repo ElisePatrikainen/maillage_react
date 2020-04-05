@@ -3,19 +3,21 @@ import Card from "./Card";
 import "./Cards.css";
 import {faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import CardProfile from "./CardProfile";
 
 function Cards(props) {
-    const {title, details} = props;
+    const {details, profiles, small} = props;
     return (
-        <div className="section white-background">
-            <h1>Les {title}</h1>
+        <div>
             <div className="cards">
-                {details.map((detail) => (<Card data={detail}/>))}
+                {details.map((detail) => profiles ? (<CardProfile data={detail} small={small}/>) : (<Card data={detail}/>))}
             </div>
-            <button className="cards-button">
-                <span>Tous les profils</span>
-                <FontAwesomeIcon icon={faChevronRight}/>
-            </button>
+            {details.length < 3 ? "" : (
+                <button className="cards-button">
+                    <span>Tous les profils</span>
+                    <FontAwesomeIcon icon={faChevronRight}/>
+                </button>
+            )}
         </div>
     )
 }

@@ -1,0 +1,36 @@
+.card.profile {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+}
+
+.card.profile .title {
+    width: 35%;
+}
+
+.card.profile:hover {
+    box-shadow: rgba(166, 167, 180, 0.55) 0px 1px 20px 0px;
+}
+
+.card.profile .description {
+    width: 65%;
+    border: 2px solid #80808036;
+    border-left: none;
+}
+
+.card.profile.small {
+    flex-direction: column;
+    width: 20%;
+}
+
+.card.profile.small .title,
+.card.profile.small .description {
+    width: 100%;
+}
+
+.card.profile.small h2 {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin: 0.2rem;
+}

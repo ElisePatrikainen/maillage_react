@@ -4,7 +4,7 @@
 }
 
 #fp-main {
-    background-color: #b7bed124;
+    background-color: var(--colored-background-greyer);
     width: 100%;
     margin: 0 !important;
 }

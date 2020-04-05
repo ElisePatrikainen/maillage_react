@@ -1,16 +1,3 @@
-:root {
-    --colored-background: #f6f6fc;
-    --logo-blue: #217dc0;
-    --grey: rgba(12, 55, 88, 1);
-    --titles-main-color: #727b8c;
-    /* --titles-second-color: #475bfb; */
-    --titles-second-color: #005ea7;
-}
-
-body {
-    background-color: var(--colored-background);
-}
-
 .bold {
     font-weight: bold;
     opacity: 0.8;

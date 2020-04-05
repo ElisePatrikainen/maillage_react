@@ -2,6 +2,14 @@
   --logo-blue: #217dc0;
   --nav-color: #6a81af;
   --dark-blue: #1f232f;
+  --titles-main-color: #727b8c;
+  --titles-second-color: #005ea7;
+  --colored-background: #f6f6fc;
+  --colored-background-greyer: #b7bed124;
+}
+
+body {
+  background-color: var(--colored-background);
 }
 
 button {

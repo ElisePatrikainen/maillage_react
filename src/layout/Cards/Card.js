@@ -4,6 +4,7 @@ import "./Card.css";
 import { ReactComponent as AmbitionSvg } from '../../assets/images/sailor.svg';
 import { ReactComponent as NetworkSvg } from '../../assets/images/online_team_meeting_.svg';
 import { ReactComponent as GoalsSvg } from '../../assets/images/checklist_.svg';
+import Portrait from '../../assets/images/portrait.jpeg';
 import {useHistory} from "react-router-dom";
 
 function Card(props) {
@@ -30,6 +31,7 @@ function chooseImage(image) {
         case "ambition": return (<AmbitionSvg/>);
         case "network": return (<NetworkSvg/>);
         case "goals": return (<GoalsSvg/>);
+        case "portrait": return (<img src={Portrait}/>)
     }
 }
 

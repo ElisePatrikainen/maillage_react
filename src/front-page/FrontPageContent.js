@@ -3,11 +3,12 @@ import './FrontPageContent.css';
 import Image1 from '../assets/images/front_test.jpg';
 import Image2 from '../assets/images/front2.jpg';
 import Card from "../layout/Cards/Card";
-import cards_data from "../assets/data/frontPage";
+import {cards_data, cards_data_profiles} from "../assets/data/frontPage";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPlayCircle} from "@fortawesome/free-solid-svg-icons";
 import {useHistory} from "react-router-dom";
 import FPProfessions from "./FPProfessions/FPProfessions";
+import Cards from "../layout/Cards/Cards";
 
 function FrontPageContent() {
     const history = useHistory();
@@ -43,6 +44,26 @@ function FrontPageContent() {
                         {cards_data.map((detail) => (<Card data={detail} large={true}/>))}
                     </div>
                 </div>
+            </div>
+
+            <div id="section-3" className="fp-section">
+                <div className="with-large-image">
+                    <img src={Image2}/>
+                    <div className="text">
+                        <div className="title">
+                            <div>Soin, aide, accompagnement</div>
+                            <span>Trouvez le</span>
+                            <h1> professionnel adapté !</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="section-5" className="fp-section">
+                <div className="h1-cont">
+                    <h1>Nos professionnels</h1>
+                </div>
+            <Cards profiles={true} small={true} details={cards_data_profiles}/>
             </div>
 
             <div id="section-3" className="fp-section">

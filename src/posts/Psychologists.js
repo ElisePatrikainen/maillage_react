@@ -1,5 +1,5 @@
 import React from "react";
-import { PageH2Before } from "../layout/Helpers/Helpers";
+import {PageH2Before} from "../layout/Helpers/Helpers";
 import Cards from "../layout/Cards/Cards";
 import cards_data from "../assets/data/psychologists";
 
@@ -12,7 +12,10 @@ function Psychologists() {
     return (
         <div>
             <div>
-                <Cards title={title} details={_data}/>
+                <div className="section">
+                    <h1>Les {title} Maillage:</h1>
+                    <Cards profiles={true} title={title} details={_data}/>
+                </div>
 
                 <div className="section colored-background text">
                     <h2>
