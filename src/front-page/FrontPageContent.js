@@ -14,6 +14,7 @@ function FrontPageContent() {
     const history = useHistory();
     const navigate = (path) => history.push(path);
 
+    // todo: refactor buttons into component
     return (
         <div>
 
@@ -27,10 +28,10 @@ function FrontPageContent() {
                         </div>
                         <div id="section-1-buttons-cont">
 
-                            <button className="dark" onClick={() => navigate("argumentaire")}>
+                            <button className="rounded dark" onClick={() => navigate("argumentaire")}>
                                 <FontAwesomeIcon className="icon" icon={faPlayCircle}/>Découvrir
                             </button>
-                            <button className="clear" onClick={() => navigate("metiers")}>
+                            <button className="rounded clear" onClick={() => navigate("metiers")}>
                                 <FontAwesomeIcon className="icon" icon={faPlayCircle}/>Métiers
                             </button>
                         </div>

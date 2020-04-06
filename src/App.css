@@ -4,7 +4,7 @@
   --dark-blue: #1f232f;
   --titles-main-color: #727b8c;
   --titles-second-color: #005ea7;
-  --colored-background: #f6f6fc;
+  --colored-background: #f6f6fc59;
   --colored-background-greyer: #b7bed124;
 }
 
@@ -59,4 +59,12 @@ a {
 
 button:hover {
   transition: all 0.3s ease-in-out;
+}
+
+button.rounded {
+  border-radius: 20px;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
 }

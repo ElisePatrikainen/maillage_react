@@ -6,10 +6,10 @@ const cards_data = [
         link: "projet"
     },
     {
-        title: "le réseau",
+        title: "nos métiers",
         description: "Les différentes professions",
         image: "network",
-        link: "reseau"
+        link: "metiers"
     }, {
         title: "l'ambition",
         description: "Regrouper des professionnels attentifs à l'écoute et au suivi singulier des personnes",

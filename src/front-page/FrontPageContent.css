@@ -7,14 +7,6 @@
     justify-content: center;
 }
 
-button {
-    border-radius: 20px;
-    padding: 0.8rem 2rem;
-    text-transform: uppercase;
-    border: none;
-    font-weight: bold;
-}
-
 .icon {
     margin-right: 1rem;
 }

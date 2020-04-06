@@ -2,8 +2,14 @@ import React from "react";
 import {PageH2Before} from "../layout/Helpers/Helpers";
 import "./Professions.css";
 import Image1 from "../assets/images/psycologue_dessin.PNG";
+import {useHistory} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faPlusCircle} from "@fortawesome/free-solid-svg-icons/faPlusCircle";
 
 function Professions() {
+
+    const history = useHistory();
+    const navigate = (path) => history.push(path);
 
     return (
         <div id="professions">
@@ -11,7 +17,7 @@ function Professions() {
                 <h1>Les métiers de la communauté Maillage</h1>
             </div>
 
-            <div>
+            <div className="section">
                 <h2>
                     <PageH2Before/>
                     Le<span className="bold"> psychologue</span>
@@ -26,7 +32,9 @@ function Professions() {
                         cognitifs, sociaux. Il existe dons des spécialisations en
                         psychologie : psychologie cognitive, psychologie sociale, du
                         développement, du travail ect..
-                        <button>Tous les profils</button>
+                        <button className="rounded" onClick={() => navigate("psychologue")}>
+                            <FontAwesomeIcon className="icon" icon={faPlusCircle}/>En savoir plus
+                        </button>
                     </div>
 
                 </div>
@@ -34,7 +42,7 @@ function Professions() {
             </div>
 
 
-            <div>
+            <div className="section">
                 <h2>
                     <PageH2Before/>
                     L'<span className="bold">art thérapeute</span>
@@ -46,7 +54,9 @@ function Professions() {
                         cognitifs, sociaux. Il existe dons des spécialisations en
                         psychologie : psychologie cognitive, psychologie sociale, du
                         développement, du travail ect..
-                        <button>Tous les profils</button>
+                        <button className="rounded" onClick={() => navigate("art-therapeuthe")}>
+                            <FontAwesomeIcon className="icon" icon={faPlusCircle}/>En savoir plus
+                        </button>
                     </div>
                     <div className="section-image">
                         <img src={Image1}/>
