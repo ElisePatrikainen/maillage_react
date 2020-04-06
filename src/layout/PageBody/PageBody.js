@@ -3,13 +3,14 @@ import Navigation from "../Navigation/Navigation";
 import './PageBody.css';
 import Image1 from '../../assets/images/hero.jpeg';
 import {useParams} from 'react-router-dom';
-import Psychologists from "../../posts/Psychologists";
+import Psychologists from "../../posts/Professions/Psychologists";
 import Argumentary from "../../posts/Argumentary";
 import Chart from "../../posts/Chart";
 import Professions from "../../posts/Professions";
 import Project from "../../posts/Project";
 import Network from "../../posts/Network";
 import Ambition from "../../posts/Ambition";
+import Patrikainen from "../../posts/Profiles/Patrikainen";
 
 // todo: in a service
 function choosePost(constantKey) {
@@ -21,6 +22,7 @@ function choosePost(constantKey) {
         case 'projet': return (<Project/>);
         case 'reseau': return (<Network/>);
         case 'ambition': return (<Ambition/>);
+        case 'patrikainen': return (<Patrikainen/>);
         default: return (<h2>{constantKey}</h2>);
     }
 }

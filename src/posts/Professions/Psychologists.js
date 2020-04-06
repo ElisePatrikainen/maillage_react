@@ -1,7 +1,7 @@
 import React from "react";
-import {PageH2Before} from "../layout/Helpers/Helpers";
-import Cards from "../layout/Cards/Cards";
-import cards_data from "../assets/data/psychologists";
+import {PageH2Before} from "../../layout/Helpers/Helpers";
+import Cards from "../../layout/Cards/Cards";
+import cards_data from "../../assets/data/psychologists";
 
 
 function Psychologists() {
