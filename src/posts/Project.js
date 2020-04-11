@@ -6,15 +6,10 @@ function Project() {
     return (
         <div>
 
-            <h1>Le projet</h1>
-
             <div>
 
-                <div className="section colored-background text">
-                    <h2>
-                        <PageH2Before/>
-                        Le<span className="bold"> projet</span> :
-                    </h2>
+                <div className="section text">
+                    <h1>Le projet</h1>
                     <p>
                         Le projet de l’association MAILLAGE est né de multiples discussions avec différents
                         professionnels du soin en cabinet libéral, au sujet de la prise en charges de personnes en
@@ -30,7 +25,7 @@ function Project() {
                     </p>
                 </div>
 
-                <div className="section text">
+                <div className="section colored-background text">
                     <h2>
                         <PageH2Before/>
                         Notre projet<span className="bold"> consiste</span> :
@@ -55,7 +50,7 @@ function Project() {
                     </p>
                 </div>
 
-                <div className="section colored-background text">
+                <div className="section text">
                     <h2>
                         <PageH2Before/>
                         Un réseau de professionnels<span className="bold"> indépendants</span> :
@@ -72,7 +67,7 @@ function Project() {
                     </p>
                 </div>
 
-                <div className="section text">
+                <div className="section colored-background text">
                     <h2>
                         <PageH2Before/>
                         Une<span className="bold"> association</span> :

@@ -1,7 +1,6 @@
 import React from 'react';
 import './FrontPageContent.css';
 import Image1 from '../assets/images/front_test.jpg';
-import Image2 from '../assets/images/front2.jpg';
 import Card from "../layout/Cards/Card";
 import {cards_data, cards_data_profiles} from "../assets/data/frontPage";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -16,7 +15,7 @@ function FrontPageContent() {
 
     // todo: refactor buttons into component
     return (
-        <div>
+        <div id="fp">
 
             <div id="section-1" className="fp-section">
                 <div className="with-large-image">
@@ -39,6 +38,9 @@ function FrontPageContent() {
                 </div>
             </div>
 
+            <div id="section-6">
+            </div>
+
             <div id="section-2" className="fp-section">
                 <div id="section-2-images">
                     <div className="cards">
@@ -49,7 +51,6 @@ function FrontPageContent() {
 
             <div id="section-3" className="fp-section">
                 <div className="with-large-image">
-                    <img src={Image2}/>
                     <div className="text">
                         <div className="title">
                             <div>Soin, aide, accompagnement</div>
@@ -62,22 +63,9 @@ function FrontPageContent() {
 
             <div id="section-5" className="fp-section">
                 <div className="h1-cont">
-                    <h1>Nos professionnels</h1>
+                    <h1 className="title-with-background">Nos professionnels</h1>
                 </div>
             <Cards profiles={true} small={true} details={cards_data_profiles}/>
-            </div>
-
-            <div id="section-3" className="fp-section">
-                <div className="with-large-image">
-                    <img src={Image2}/>
-                    <div className="text">
-                        <div className="title">
-                            <div>Soin, aide, accompagnement</div>
-                            <span>Trouvez le</span>
-                            <h1> professionnel adapté !</h1>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <FPProfessions/>

@@ -11,6 +11,8 @@ import Project from "../../posts/Project";
 import Network from "../../posts/Network";
 import Ambition from "../../posts/Ambition";
 import Patrikainen from "../../posts/Profiles/Patrikainen";
+import Barbier from "../../posts/Profiles/Barbier";
+import Foucault from "../../posts/Profiles/Foucault";
 
 // todo: in a service
 function choosePost(constantKey) {
@@ -23,6 +25,8 @@ function choosePost(constantKey) {
         case 'reseau': return (<Network/>);
         case 'ambition': return (<Ambition/>);
         case 'patrikainen': return (<Patrikainen/>);
+        case 'barbier': return (<Barbier/>);
+        case 'foucault': return (<Foucault/>);
         default: return (<h2>{constantKey}</h2>);
     }
 }

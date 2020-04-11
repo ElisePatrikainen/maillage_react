@@ -13,7 +13,7 @@ function Cards(props) {
                 {details.map((detail) => profiles ? (<CardProfile data={detail} small={small}/>) : (<Card data={detail}/>))}
             </div>
             {details.length < 3 ? "" : (
-                <button className="cards-button">
+                <button className="cards-button dark">
                     <span>Tous les profils</span>
                     <FontAwesomeIcon icon={faChevronRight}/>
                 </button>

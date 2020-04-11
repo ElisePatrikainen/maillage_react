@@ -1,3 +1,14 @@
+#fp {
+    background: radial-gradient(1.5em 6.28571em at 1.95em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(1.5em 6.28571em at -0.45em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 1.5em 5.5em, radial-gradient(2.3em 4.57143em at 2.99em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(2.3em 4.57143em at -0.69em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 2.3em 4em, radial-gradient(3.5em 6.28571em at 4.55em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(3.5em 6.28571em at -1.05em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 3.5em 5.5em, radial-gradient(#005ea740, #ffffff);
+    background-color: #ffffff;
+    background-size: 1.5em 11em, 1.5em 11em, 2.3em 8em, 2.3em 8em, 3.5em 11em, 3.5em 11em, 100% 100%;
+    background-repeat: repeat;
+}
+
+#fp h1 {
+    color: var(--front-page-titles);
+}
+
 .fp-section {
     position: relative;
 }
@@ -5,6 +16,14 @@
 .h1-cont {
     display: flex;
     justify-content: center;
+}
+
+h1.title-with-background {
+    color: var(--front-page-titles);
+}
+
+h1.title-with-background:before {
+    background-color: #e0f2ff69;
 }
 
 .icon {
@@ -18,25 +37,6 @@
     margin: 3rem 30% 1rem auto;
     display: block;
     transform: translateX(65%);
-}
-
-.dark {
-    color: white;
-    background-color: #1f232f;
-}
-
-.dark:hover {
-    background-color: black;
-}
-
-.clear {
-    color: #1f232f;
-    border: 2px solid #1f232f;
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.clear:hover {
-    background-color: rgb(203, 203, 203);
 }
 
 /* fp-section 1 */
@@ -176,12 +176,14 @@
 }
 
 
-#section-3, #section-5 {
-    margin-top: 4rem;
+#section-3 {
+    clip-path: polygon(0 0, 100% 23%, 100% 65%, 0% 100%);
+    background-color: var(--front-page-second-background-color);
 }
 
 #section-3 .text {
     color: var(--dark-blue);
+    opacity: 0.8;
 }
 
 
@@ -209,4 +211,10 @@ footer ul {
         width: 28%;
         padding-left: 2%;
     }
+}
+
+#section-6 {
+    clip-path: polygon(0 0, 100% 0, 100% 32%, 0% 100%);
+    background-color: var(--front-page-second-background-color);
+    height: 5rem;
 }

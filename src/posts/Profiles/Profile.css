@@ -1,0 +1,17 @@
+#profile .contact {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    color: grey;
+}
+
+#profile  .first-section img {
+    height: 250px;
+    border-radius: 10px;
+}
+
+#profile  .first-section .sub-title {
+    font-weight: bold;
+    color: var(--titles-main-color);
+}
+

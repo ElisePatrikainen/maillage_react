@@ -1,6 +1,7 @@
 import React from "react";
 import "./FPProfessions.css";
 import {useHistory} from "react-router-dom";
+import Image from "../../assets/images/front1bis.jpg";
 
 const data = {
     therapy: [{
@@ -54,13 +55,15 @@ function FPProfessions() {
                     </div>
 
                 </div>
-                <div className="images-container">
-                    <div className="image"></div>
-                    <div className="vertical-images">
-                        <div className="image"></div>
-                        <div className="image"></div>
+
+                <div className="divided-image">
+                    <img src={Image}/>
+                    <div className="dividers-cont">
+                        <div  className="divider"></div>
+                        <div  className="divider"></div>
                     </div>
                 </div>
+
             </div>
         </div>
     )

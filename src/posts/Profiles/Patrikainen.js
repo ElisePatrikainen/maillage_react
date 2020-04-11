@@ -9,10 +9,11 @@ function Patrikainen() {
         <div>
             <div>
                 <div className="section">
+                    <h1>Geraldine Patrikainen :</h1>
                     <img src={Portrait} style={{float: 'right', width: '300px'}}/>
                     <h2>
                         <PageH2Before/>
-                        <span className="bold">Geraldine Patrikainen :</span>
+                        <span className="bold">Présentation :</span>
                     </h2>
                     <p>
                         Curieuse du monde physique et de la nature qui m'entoure, j'ai commencé mes études par

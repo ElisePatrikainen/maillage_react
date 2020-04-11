@@ -16,12 +16,3 @@
     margin: auto;
     border-left: #0000004a solid;
 }
-
-#fp-right-band {
-    background-color: #cfd5d8;
-    width: 30%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-}

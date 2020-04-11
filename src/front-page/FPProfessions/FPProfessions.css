@@ -1,6 +1,9 @@
 
 #section-4 {
     margin-top: 3rem;
+    clip-path: polygon(0 0, 100% 13%, 100% 91%, 0% 100%);
+    background-color: var(--front-page-second-background-color);
+    padding: 5rem 0;
 }
 
 #section-4 .list-section {
@@ -32,26 +35,29 @@
     background-color: #2d3a5a;
 }
 
-#section-4 .images-container {
+#section-4 .divided-image {
+    position: relative;
     width: 30%;
     display: flex;
-    justify-content: space-between;
 }
 
-#section-4 .images-container .image {
-    background-color: grey;
+#section-4 .divided-image img {
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
-#section-4 .images-container > div {
-    width: 48%;
-}
-
-#section-4 .images-container .vertical-images {
+#section-4 .divided-image .dividers-cont {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 100%;
+    position: relative;
 }
 
-#section-4 .images-container .vertical-images > div {
-    height: 48%;
+#section-4 .divided-image .divider {
+    width: 5px;
+    height: 100%;
+    background-color: #cfd5d8;
 }

@@ -6,6 +6,8 @@
   --titles-second-color: #005ea7;
   --colored-background: #f6f6fc59;
   --colored-background-greyer: #b7bed124;
+  --front-page-second-background-color: white;
+  --front-page-titles: #343a4d
 }
 
 body {
@@ -38,6 +40,7 @@ h1::before, .title-underlined::before {
   height: 10px;
   width: 20px;
   background-color: #8ea7c16e;
+  background-color: #1576bd38;
   z-index: -1;
 }
 
@@ -61,10 +64,30 @@ button:hover {
   transition: all 0.3s ease-in-out;
 }
 
-button.rounded {
+button {
   border-radius: 20px;
   padding: 0.8rem 2rem;
   text-transform: uppercase;
   border: none;
   font-weight: bold;
+}
+
+
+.dark {
+  color: white;
+  background-color: #1f232f;
+}
+
+.dark:hover {
+  background-color: black;
+}
+
+.clear {
+  color: #1f232f;
+  border: 2px solid #1f232f;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.clear:hover {
+  background-color: rgb(203, 203, 203);
 }

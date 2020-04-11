@@ -1,16 +1,22 @@
 const cards_data = [
     {
-        name: "Graz",
-        firstName: "Geneviève",
+        name: "Patrikainen",
+        firstName: "Geraldine",
         description: "Psychologue - psychanalyste",
         image: "portrait",
         link: "patrikainen"
     }, {
-        name: "Graz",
-        firstName: "Geneviève",
+        name: "Barbier",
+        firstName: "Kevin",
         description: "Psychologue - psychanalyste",
         image: "portrait",
-        link: "patrikainen"
+        link: "barbier"
+    }, {
+        name: "Foucault",
+        firstName: "Céline",
+        description: "Psychologue - psychanalyste",
+        image: "portrait",
+        link: "foucault"
     }
 ];
 
