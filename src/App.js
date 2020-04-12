@@ -9,13 +9,9 @@ function App() {
     <div>
       <Router>
         <Switch>
-          <Route exact path="/:constantKey">
-            <PageBody />
-          </Route>
-
-          <Route exact path="/">
-            <FrontPageBody />
-          </Route>
+          <Route path="/:topic/:detail" component={PageBody} />
+          <Route path="/:topic" component={PageBody} />
+          <Route exact path="/" component={FrontPageBody} />
         </Switch>
       </Router>
     </div>

@@ -10,13 +10,11 @@ import Professions from "../../posts/Professions";
 import Project from "../../posts/Project";
 import Network from "../../posts/Network";
 import Ambition from "../../posts/Ambition";
-import Patrikainen from "../../posts/Profiles/Patrikainen";
-import Barbier from "../../posts/Profiles/Barbier";
-import Foucault from "../../posts/Profiles/Foucault";
+import Profile from "../../posts/Profile/Profile";
 
 // todo: in a service
-function choosePost(constantKey) {
-    switch (constantKey) {
+function choosePost(topic) {
+    switch (topic) {
         case 'psychologue': return (<Psychologists/>);
         case 'argumentaire': return (<Argumentary/>);
         case 'metiers': return (<Professions/>);
@@ -24,15 +22,13 @@ function choosePost(constantKey) {
         case 'projet': return (<Project/>);
         case 'reseau': return (<Network/>);
         case 'ambition': return (<Ambition/>);
-        case 'patrikainen': return (<Patrikainen/>);
-        case 'barbier': return (<Barbier/>);
-        case 'foucault': return (<Foucault/>);
-        default: return (<h2>{constantKey}</h2>);
+        case 'profile': return (<Profile/>);
+        default: return (<h2>{topic}</h2>);
     }
 }
 
 function PageBody() {
-    let {constantKey} = useParams();
+    let {topic} = useParams();
     return (
         <div id="top-cont">
             <img id="background-img-top" src={Image1}/>
@@ -49,7 +45,7 @@ function PageBody() {
 
 
                 <div id="main">
-                    <div>{choosePost(constantKey)}
+                    <div>{choosePost(topic)}
                     </div>
 
                     <div>

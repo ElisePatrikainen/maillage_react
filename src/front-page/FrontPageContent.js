@@ -65,7 +65,7 @@ function FrontPageContent() {
                 <div className="h1-cont">
                     <h1 className="title-with-background">Nos professionnels</h1>
                 </div>
-            <Cards profiles={true} small={true} details={cards_data_profiles}/>
+            <Cards profiles={true} small={true}/>
             </div>
 
             <FPProfessions/>

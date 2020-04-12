@@ -4,25 +4,26 @@ import "./CardProfile.css";
 // todo: dynamic imports
 import PatrikainenImage from '../../assets/images/Geraldine-Patrikainen.jpg';
 import User from '../../assets/images/user.png';
-import {useHistory} from "react-router-dom";
+import {useHistory, useParams} from "react-router-dom";
+import profiles from "../../assets/data/profiles";
 
 function CardProfile(props) {
 
     const history = useHistory();
     const navigate = (path) => history.push(path);
 
-    const {name, firstName, description, image, link} = props.data;
+    const {profile} = props;
     const small = props.small;
     const classes = 'card profile' + (small ? ' small' : '');
     return (
-        <div onClick={() => navigate(link)} className={classes}>
+        <div onClick={() => navigate(profile.link)} className={classes}>
             <div className="title">
-                {chooseImage(image)}
-                {small ? (<h2>{ firstName[0] + '. ' + name}</h2>) : ''}
+                <img src={profile.image ? profile.image : User}/>
+                {small ? (<h2>{profile.name}</h2>) : ''}
             </div>
             <div className="description">
-                {small ? '' : (<h2>{ firstName[0] + '. ' + name}</h2>)}
-                {description}
+                {small ? '' : (<h2>{profile.name}</h2>)}
+                {profile.profession}
             </div>
         </div>
     )
