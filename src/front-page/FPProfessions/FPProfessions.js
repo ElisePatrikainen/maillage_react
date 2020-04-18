@@ -2,29 +2,17 @@ import React from "react";
 import "./FPProfessions.css";
 import {useHistory} from "react-router-dom";
 import Image from "../../assets/images/front1bis.jpg";
+import {list_professions_data} from "../../assets/data/frontPage";
 
-const data = {
-    therapy: [{
-        title: 'psychiatre', link: 'psychiatre'
-    }, {
-        title: 'psychologue', link: 'psychologue'
-    }, {
-        title: 'psychanalyste', link: 'psychanalyste'
-    }, {
-        title: 'art thérapeute', link: 'art-thérapeute'
-    }, {
-        title: 'ergothérapeute', link: 'ergothérapeute'
-    }]
-};
-
+// todo: set as class ?
 function FPProfessions() {
 
     const history = useHistory();
     const navigate = (path) => history.push(path);
 
-    const therapyProfessions = data.therapy.map(
-        (el) => (<button className="list-button" onClick={() => navigate(el.link)}>{el.title}</button>)
-    );
+    const getProfessions = (key) => list_professions_data[key].map(
+        (el) => (<button className={'list-button' + (el.active ? ' active' : '')}
+                         onClick={() => el.active ? navigate(el.link) : ''}>{el.title}</button>));
 
     return (
         <div id="section-4" className="fp-section">
@@ -34,33 +22,33 @@ function FPProfessions() {
             <div className="list-section">
                 <div className="list-container">
                     <div>
-                        <h2>Thérapie</h2>
+                        <h2>Thérapie :</h2>
                         <div>
-                            {therapyProfessions}
+                            {getProfessions('therapy')}
                         </div>
                     </div>
 
                     <div>
-                        <h2>Aide et thérapie sociale :</h2>
+                        <h2>Aide et accompagnement social :</h2>
                         <div>
-                            {therapyProfessions}
+                            {getProfessions('social_support')}
                         </div>
                     </div>
 
                     <div>
-                        <h2>Thérapie</h2>
+                        <h2>Activités :</h2>
                         <div>
-                            {therapyProfessions}
+                            {getProfessions('activities')}
                         </div>
                     </div>
 
                 </div>
 
                 <div className="divided-image">
-                    <img src={Image}/>
+                    <img src={Image} alt=""/>
                     <div className="dividers-cont">
-                        <div  className="divider"></div>
-                        <div  className="divider"></div>
+                        <div className="divider"/>
+                        <div className="divider"/>
                     </div>
                 </div>
 

@@ -46,4 +46,30 @@ const cards_data_profiles = [
     }
 ];
 
-export {cards_data, cards_data_profiles};
+const list_professions_data = {
+    therapy: [{
+        title: 'psychiatre', link: 'psychiatre'
+    }, {
+        title: 'psychologue', link: 'psychologue', active: true
+    }, {
+        title: 'psychanalyste', link: 'psychanalyste', active: true
+    }, {
+        title: 'art thérapeute', link: 'art-thérapeute'
+    }, {
+        title: 'ergothérapeute', link: 'ergothérapeute'
+    }],
+    social_support: [{
+        title: 'assistante sociale', link: 'assistante-sociale'
+    }, {
+        title: 'éducateur', link: 'educateur'
+    }, {
+        title: 'médiation artistique', link: 'mediation-artistique'
+    }],
+    activities: [{
+        title: 'sport', link: 'sport'
+    }, {
+        title: 'langues', link: 'langues'
+    }]
+};
+
+export {cards_data, cards_data_profiles, list_professions_data};

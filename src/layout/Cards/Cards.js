@@ -13,11 +13,10 @@ function Cards(props) {
             <div className="cards">
                 {
                     profiles ?
-                        Object.keys(profiles).map((key) => (<CardProfile profile={profiles[key]} small={small}/>))
+                        Object.keys(profiles).map((key) => (<CardProfile profile={key} small={small}/>))
                         : details.map((detail) => (<Card data={detail}/>))
                 }
             </div>
-            // todo: detais
             {details && details.length < 3 ? "" : (
                 <button className="cards-button dark">
                     <span>Tous les profils</span>

@@ -8,8 +8,33 @@
     width: 35%;
 }
 
+.card.profile img {
+    height: 14rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card.profile .default-user-icon {
+    height: 14rem;
+    width: 100%;
+}
+
+.card.profile .default-user-icon svg {
+    font-size: 8rem;
+    color: rgba(167, 167, 167, 0.29);
+    width: 90%;
+    height: 90%;
+    bottom: 0;
+    padding-top: 10%;
+    /* color: white; */
+    /* background-color: #d3e3f0; */
+    position: absolute;
+    z-index: 0;
+    margin-left: 5%;
+}
+
 .card.profile:hover {
-    box-shadow: rgba(166, 167, 180, 0.55) 0px 1px 20px 0px;
+    box-shadow: rgba(166, 167, 180, 0.55) 0 1px 20px 0;
 }
 
 .card.profile .description {
@@ -29,6 +54,10 @@
     height: 100%;
     position: absolute;
     background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 30%);
+}
+
+.card.profile.small .title.default-user-icon:before {
+    opacity: 0.5;
 }
 
 .card.profile.small .title,
