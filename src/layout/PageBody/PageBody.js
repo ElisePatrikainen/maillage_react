@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from "../Navigation/Navigation";
 import './PageBody.css';
-import Image1 from '../../assets/images/hero.jpeg';
+import BackgroundImage from '../../assets/images/hero.jpeg';
 import {useParams} from 'react-router-dom';
 import Psychologists from "../../posts/Professions/Psychologists";
 import Argumentary from "../../posts/Argumentary";
@@ -11,6 +11,7 @@ import Project from "../../posts/Project";
 import Network from "../../posts/Network";
 import Ambition from "../../posts/Ambition";
 import Profile from "../../posts/Profile/Profile";
+import Team from "../../posts/Team";
 
 // todo: in a service
 function choosePost(topic) {
@@ -23,6 +24,7 @@ function choosePost(topic) {
         case 'reseau': return (<Network/>);
         case 'ambition': return (<Ambition/>);
         case 'profile': return (<Profile/>);
+        case 'equipe': return (<Team/>);
         default: return (<h2>{topic}</h2>);
     }
 }
@@ -31,7 +33,7 @@ function PageBody() {
     let {topic} = useParams();
     return (
         <div id="top-cont">
-            <img id="background-img-top" src={Image1}/>
+            <img id="background-img-top" src={BackgroundImage} alt="background"/>
             <Navigation/>
 
             <div id="main-cont">
@@ -56,7 +58,7 @@ function PageBody() {
 
             </div>
 
-            <img id="background-img-bottom" src={Image1}/>
+            <img id="background-img-bottom" src={BackgroundImage} alt="background"/>
         </div>
     );
 }
