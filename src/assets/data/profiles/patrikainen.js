@@ -1,8 +1,9 @@
 import React from "react";
-import Photo from "../../images/Geraldine-Patrikainen.jpg";
+import Photo from "../../images/Geraldine-Patrikainen2.png";
 
 const name = (<span>Géraldine Patrikainen</span>);
 const profession = (<span>Psychologue - psychanalyste</span>);
+const tag = 'psychologist';
 const photo = Photo;
 const phone = (<span>06 62 60 52 29</span>);
 const mail = (<span>geraldine.patrikainen@gmail.com</span>);
@@ -70,6 +71,6 @@ const professionalJourney = (
 );
 
 // todo: function instead of listing
-const patrikainen = {name, profession, photo, phone, mail, presentation, degrees, professionalJourney};
+const patrikainen = {name, profession, tag, photo, phone, mail, presentation, degrees, professionalJourney};
 
 export default patrikainen;

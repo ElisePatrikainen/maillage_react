@@ -3,9 +3,10 @@ import Photo from "../../images/Geraldine-Patrikainen.jpg";
 
 const name = (<span>Céline Foucault</span>);
 const profession = (<span>Psychologue - psychanalyste</span>);
-const photo = undefined;
-const phone = undefined;
-const mail = undefined;
+const tag = 'psychologist';
+const photo = null;
+const phone = null;
+const mail = null;
 
 const presentation = (
     <div>
@@ -85,6 +86,6 @@ const professionalJourney = (
     </div>
 );
 
-const foucault = {name, profession, photo, phone, mail, presentation, degrees, professionalJourney};
+const foucault = {name, profession, tag, photo, phone, mail, presentation, degrees, professionalJourney};
 
 export default foucault;

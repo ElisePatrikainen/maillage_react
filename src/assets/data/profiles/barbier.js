@@ -2,9 +2,10 @@ import React from "react";
 
 const name = (<span>Kévin Barbier</span>);
 const profession = (<span>Psychologue - psychanalyste</span>);
-const photo = undefined;
-const phone = undefined;
-const mail = undefined;
+const tag = 'psychologist';
+const photo = null;
+const phone = null;
+const mail = null;
 
 const presentation = (
     <div>
@@ -67,10 +68,10 @@ const presentation = (
     </div>
 );
 
-const degrees = undefined;
+const degrees = null;
 
-const professionalJourney = undefined;
+const professionalJourney = null;
 
-const barbier = {name, profession, photo, phone, mail, presentation, degrees, professionalJourney};
+const barbier = {name, profession, tag, photo, phone, mail, presentation, degrees, professionalJourney};
 
 export default barbier;
