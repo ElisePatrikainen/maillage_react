@@ -1,7 +1,6 @@
 .card.profile {
     display: flex;
     flex-direction: row;
-    width: 40%;
 }
 
 .card.profile .title {
@@ -30,7 +29,7 @@
     /* background-color: #d3e3f0; */
     position: absolute;
     z-index: 0;
-    margin-left: 5%;
+    margin: 0 0 0 5%;
 }
 
 .card.profile:hover {
@@ -45,7 +44,7 @@
 
 .card.profile.small {
     flex-direction: column;
-    width: 20%;
+    height: 17rem;
 }
 
 .card.profile.small .title:before {

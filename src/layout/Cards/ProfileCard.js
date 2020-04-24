@@ -1,12 +1,11 @@
 import React from "react";
-import "./Card.css";
-import "./CardProfile.css";
+import "./ProfileCard.css";
 import {useHistory} from "react-router-dom";
 import profiles from "../../assets/data/profiles";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-solid-svg-icons/faUser";
 
-function CardProfile(props) {
+function ProfileCard(props) {
 
     const history = useHistory();
     const navigate = (path) => history.push(path);
@@ -19,7 +18,7 @@ function CardProfile(props) {
     const small = props.small;
     const classes = 'card profile' + (small ? ' small' : '');
     return (
-        <div onClick={() => navigate("profile/" + props.profile)} className={classes}>
+        <div onClick={() => navigate("profile/" + props.profile)} className={classes} style={{marginTop: '1rem'}}>
             <div className={'title' + (profile.photo ? '' : ' default-user-icon')}>
                 {profile.photo ?
                     (<img src={profile.photo} alt={profile.name}/>)
@@ -35,4 +34,4 @@ function CardProfile(props) {
     )
 }
 
-export default CardProfile;
+export default ProfileCard;

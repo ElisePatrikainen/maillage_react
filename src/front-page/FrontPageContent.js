@@ -7,7 +7,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPlayCircle} from "@fortawesome/free-solid-svg-icons";
 import {useHistory} from "react-router-dom";
 import FPProfessions from "./FPProfessions/FPProfessions";
-import Cards from "../layout/Cards/Cards";
+import ProfileCards from "../layout/Cards/ProfileCards";
 
 function FrontPageContent() {
     const history = useHistory();
@@ -19,7 +19,7 @@ function FrontPageContent() {
 
             <div id="section-1" className="fp-section">
                 <div className="with-large-image">
-                    <img src={Image1}/>
+                    <img src={Image1} alt="hero image"/>
                     <div className="text">
                         <div className="title">
                             <h1>1er réseau</h1><span> de professionnels indépendants dédié au </span>
@@ -65,7 +65,7 @@ function FrontPageContent() {
                 <div className="h1-cont">
                     <h1 className="title-with-background">Nos professionnels</h1>
                 </div>
-            <Cards profiles={true} small={true}/>
+            <ProfileCards small={true}/>
             </div>
 
             <FPProfessions/>
