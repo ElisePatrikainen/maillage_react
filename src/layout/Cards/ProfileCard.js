@@ -4,11 +4,15 @@ import {useHistory} from "react-router-dom";
 import profiles from "../../assets/data/profiles";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-solid-svg-icons/faUser";
+import {UserPhoto} from "../Helpers/Helpers";
 
 function ProfileCard(props) {
 
     const history = useHistory();
-    const navigate = (path) => history.push(path);
+    const navigate = (path) => {
+        window.scrollTo(0, 0)
+        history.push(path);
+    };
 
     const profile = profiles[props.profile];
 
@@ -19,11 +23,8 @@ function ProfileCard(props) {
     const classes = 'card profile' + (small ? ' small' : '');
     return (
         <div onClick={() => navigate("profile/" + props.profile)} className={classes} style={{marginTop: '1rem'}}>
-            <div className={'title' + (profile.photo ? '' : ' default-user-icon')}>
-                {profile.photo ?
-                    (<img src={profile.photo} alt={profile.name}/>)
-                    : (<FontAwesomeIcon icon={faUser}/>)
-                }
+            <div className={'title' + (profile.photo ? '' : ' light-gradient')}>
+                <UserPhoto profile={profile}/>
                 {small ? (<h2>{profile.name}</h2>) : ''}
             </div>
             <div className="description">

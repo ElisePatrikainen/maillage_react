@@ -52,9 +52,7 @@ const list_professions_data = {
     }, {
         title: 'psychologue', link: 'psychologue', active: true
     }, {
-        title: 'psychanalyste', link: 'psychanalyste', active: true
-    }, {
-        title: 'art thérapeute', link: 'art-thérapeute'
+        title: 'art thérapeute', link: 'art-therapeute', active: true
     }, {
         title: 'ergothérapeute', link: 'ergothérapeute'
     }],
@@ -68,7 +66,7 @@ const list_professions_data = {
     activities: [{
         title: 'sport', link: 'sport'
     }, {
-        title: 'langues', link: 'langues'
+        title: 'langues', link: 'teacher', active: true
     }]
 };
 

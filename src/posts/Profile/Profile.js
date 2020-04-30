@@ -1,5 +1,5 @@
 import React from "react";
-import {PageH2Before} from "../../layout/Helpers/Helpers";
+import {PageH2Before, UserPhoto} from "../../layout/Helpers/Helpers";
 import Portrait from "../../assets/images/portrait.jpeg";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPhone, faEnvelope} from "@fortawesome/free-solid-svg-icons";
@@ -23,7 +23,9 @@ function Profile() {
         <div id="profile">
             <div>
                 <div className="section first-section colored-background" style={{display: 'flex'}}>
-                    <img src={profile.photo ? profile.photo : UserImage}/>
+                    <div className="user-photo">
+                        <UserPhoto profile={profile}/>
+                    </div>
                     <div className="contact">
                         <h1>{profile.name} :</h1>
                         <div className="sub-title">{profile.profession}</div>

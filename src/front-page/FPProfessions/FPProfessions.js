@@ -8,7 +8,10 @@ import {list_professions_data} from "../../assets/data/frontPage";
 function FPProfessions() {
 
     const history = useHistory();
-    const navigate = (path) => history.push(path);
+    const navigate = (path) => {
+        window.scrollTo(0, 0)
+        history.push(path);
+    };
 
     const getProfessions = (key) => list_professions_data[key].map(
         (el) => (<button className={'list-button' + (el.active ? ' active' : '')}

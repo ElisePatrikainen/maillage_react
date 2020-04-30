@@ -5,9 +5,11 @@
     color: grey;
 }
 
-#profile  .first-section img {
+#profile  .first-section .user-photo {
     height: 250px;
+    width: 200px;
     border-radius: 10px;
+    position: relative;
 }
 
 #profile  .first-section .sub-title {

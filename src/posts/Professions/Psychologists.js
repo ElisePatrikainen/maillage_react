@@ -1,20 +1,18 @@
 import React from "react";
 import {PageH2Before} from "../../layout/Helpers/Helpers";
 import ProfileCards from "../../layout/Cards/ProfileCards";
-import cards_data from "../../assets/data/psychologists";
 
 
 function Psychologists() {
 
     const title = "psychologues";
-    const _data = cards_data;
 
     return (
         <div>
             <div>
                 <div className="section">
                     <h1>Les {title} Maillage:</h1>
-                    <ProfileCards title={title} details={_data} tag="psychologist" small={true}/>
+                    <ProfileCards tag="psychologist" small={true}/>
                 </div>
 
                 <div className="section colored-background text">

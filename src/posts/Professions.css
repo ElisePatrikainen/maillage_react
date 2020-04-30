@@ -1,14 +1,11 @@
 #professions {
-    padding: 1.5rem;
-}
-
-#professions .section-content {
     display: flex;
-    padding: 2rem;
+    justify-content: space-between;
 }
 
-#professions .section-content > div {
-    width: 50%;
+#professions > div {
+    width: 40%;
+    margin-right: 5%;
 }
 
 #professions .section-image img {
@@ -18,10 +15,6 @@
 
 #professions button {
     display: block;
-}
-
-#professions h1 {
-    margin: 2rem auto;
 }
 
 #professions button {

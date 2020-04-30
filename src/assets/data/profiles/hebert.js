@@ -3,7 +3,7 @@ import Photo from "../../images/Geraldine-Patrikainen.jpg";
 
 const name = (<span>Falone Hebert</span>);
 const profession = (<span>Professeur Anglais</span>);
-const tag = 'teacher.english';
+const tag = 'teacher';
 const photo = null;
 const phone = null;
 const mail = null;

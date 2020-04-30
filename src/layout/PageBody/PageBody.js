@@ -6,17 +6,21 @@ import {useParams} from 'react-router-dom';
 import Psychologists from "../../posts/Professions/Psychologists";
 import Argumentary from "../../posts/Argumentary";
 import Chart from "../../posts/Chart";
-import Professions from "../../posts/Professions";
+import {Professions} from "../../posts/Professions";
 import Project from "../../posts/Project";
 import Network from "../../posts/Network";
 import Ambition from "../../posts/Ambition";
 import Profile from "../../posts/Profile/Profile";
 import Team from "../../posts/Team";
+import ArtTherapist from "../../posts/Professions/ArtTherapist";
+import Teacher from "../../posts/Professions/Teachers";
 
 // todo: in a service
 function choosePost(topic) {
     switch (topic) {
         case 'psychologue': return (<Psychologists/>);
+        case 'art-therapeute': return (<ArtTherapist/>);
+        case 'teacher': return (<Teacher/>);
         case 'argumentaire': return (<Argumentary/>);
         case 'metiers': return (<Professions/>);
         case 'charte': return (<Chart/>);

@@ -11,7 +11,10 @@ import ProfileCards from "../layout/Cards/ProfileCards";
 
 function FrontPageContent() {
     const history = useHistory();
-    const navigate = (path) => history.push(path);
+    const navigate = (path) => {
+        window.scrollTo(0, 0)
+        history.push(path);
+    };
 
     // todo: refactor buttons into component
     return (

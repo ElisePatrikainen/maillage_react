@@ -10,7 +10,10 @@ function Card(props) {
 
     // todo: remove all profile things
     const history = useHistory();
-    const navigate = (path) => history.push(path);
+    const navigate = (path) => {
+        window.scrollTo(0, 0)
+        history.push(path);
+    };
 
     const {name, title = null, firstName, description, image, link} = props.data;
     const large = props.large | false;

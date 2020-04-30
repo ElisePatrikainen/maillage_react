@@ -6,12 +6,14 @@ import Logo from "../../logo.png";
 
 class Navigation extends React.Component {
     navIsTransparent = window.scrollY < 50;
+    show = false;
 
     constructor(props) {
         super(props);
         this.state = {
             isFrontPage: props.isFrontPage,
-            navIsTransparent: props.isFrontPage && window.scrollY < 50
+            navIsTransparent: props.isFrontPage && window.scrollY < 50,
+            show: false
         };
     }
 
@@ -20,6 +22,7 @@ class Navigation extends React.Component {
     }
 
     updateNavOnScroll = () => this.setState({navIsTransparent: window.scrollY < this.isTransparentValidator()})
+    updateOnPageChange = () => window.scrollTo(0, 0)
 
     componentDidMount() {
         window.addEventListener("scroll", this.updateNavOnScroll);
@@ -61,20 +64,31 @@ class Navigation extends React.Component {
                             <NavLink to="/">Maillage</NavLink>
                         </li>
 
-                        <li>
+                        <li id="nav-right">
                             <ul>
-                                <li className="nav-element nav-2-selected">
-                                    <NavLink to="/metiers">Nos métiers</NavLink>
+                                <li className={'nav-element nav-2-selected'
+                                        + (this.state.navIsTransparent)}
+                                    onMouseEnter={() => this.setState({show: true})}
+                                    onMouseLeave={() => this.setState({show: false})}>
+                                    <NavLink to="/metiers"
+                                             onClick={this.updateOnPageChange}>Nos métiers</NavLink>
+                                    <ul className={'nav-element-sub'
+                                            + (this.state.show ? ' displayed' : '')
+                                            + (!this.state.navIsTransparent ? ' with-background' : '')}>
+                                        <li><span>AZAZA</span></li>
+                                        <li><span>AZAZA</span></li>
+                                        <li><span>AZAZA</span></li>
+                                    </ul>
                                 </li>
                                 <li className="nav-element">
-                                    <NavLink to="/charte">Notre charte</NavLink>
+                                    <NavLink to="/charte" onClick={this.updateOnPageChange}>Notre charte</NavLink>
                                 </li>
 
                                 <li className="nav-element">
-                                    <NavLink to="/equipe">Qui sommes-nous ?</NavLink>
+                                    <NavLink to="/equipe" onClick={this.updateOnPageChange}>Qui sommes-nous ?</NavLink>
                                 </li>
                                 <li className="nav-element">
-                                    <NavLink to="/partenaires">Partenaires</NavLink>
+                                    <NavLink to="/partenaires" onClick={this.updateOnPageChange}>Partenaires</NavLink>
                                 </li>
                             </ul>
                         </li>

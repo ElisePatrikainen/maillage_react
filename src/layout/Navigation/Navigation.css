@@ -136,6 +136,52 @@ nav.transparent {
 
     .nav-element {
         min-width: 180px;
+        position: relative;
+    }
+
+    #large-nav-menu ul.nav-element-sub {
+        flex-direction: column;
+        position: absolute;
+        opacity: 0;
+        transition: all 500ms ease-in-out;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    #large-nav-menu ul.nav-element-sub li {
+        width: 100%;
+        padding: 0.35rem 0;
+        cursor: pointer;
+    }
+
+    #large-nav-menu #nav-right li:hover {
+        background: rgb(203, 205, 215);
+        background: radial-gradient(ellipse, rgb(220, 222, 233) 0%, rgba(255, 255, 255, 0) 50%);
+    }
+
+    #large-nav-menu #nav-right .with-background li:hover {
+        background: rgb(203, 205, 215);
+        background: radial-gradient(ellipse, rgb(220, 222, 233) 0%, rgba(255, 255, 255, 1) 50%);
+    }
+
+    #large-nav-menu ul.nav-element-sub.with-background li {
+        background-color: white;
+    }
+
+    #large-nav-menu ul.nav-element-sub li:last-child {
+        padding-bottom: 1rem;
+    }
+
+    #large-nav-menu ul.nav-element-sub li span {
+        margin: 0.3rem 0;
+    }
+
+    #large-nav-menu ul.nav-element-sub li span:hover {
+        border-bottom: 2px solid var(--dark-blue);
+    }
+
+    #large-nav-menu ul.nav-element-sub.displayed {
+        opacity: 1;
     }
 
 }
