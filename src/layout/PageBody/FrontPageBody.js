@@ -5,7 +5,6 @@ import Navigation from "../Navigation/Navigation";
 
 const content = (
   <div id="fp-top-cont">
-    <Navigation isFrontPage="true"/>
     <div id="fp-main">
       <FrontPageContent/>
     </div>

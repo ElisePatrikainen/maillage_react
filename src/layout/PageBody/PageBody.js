@@ -38,7 +38,6 @@ function PageBody() {
     return (
         <div id="top-cont">
             <img id="background-img-top" src={BackgroundImage} alt="background"/>
-            <Navigation/>
 
             <div id="main-cont">
 

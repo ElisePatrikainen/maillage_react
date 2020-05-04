@@ -1,5 +1,4 @@
 import React from "react";
-import Photo from "../../images/Geraldine-Patrikainen.jpg";
 
 const name = (<span>Valérie Baudot Lecardinal</span>);
 const profession = (<span>Art-thérapeute</span>);

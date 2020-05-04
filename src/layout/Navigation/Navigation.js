@@ -1,40 +1,126 @@
 import React from 'react';
 import './Navigation.css';
-import {NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import Logo from "../../logo.png";
 
+const data = [
+    {label: 'Nos métiers', link: '/metiers',
+        children: [{
+            label: 'psychiatre', link: 'psychiatre'
+        }, {
+            label: 'psychologue', link: './psychologue', active: true
+        }, {
+            label: 'art thérapeute', link: 'art-therapeute', active: true
+        }, {
+            label: 'ergothérapeute', link: 'ergothérapeute'
+        }, {
+            label: 'assistante sociale', link: 'assistante-sociale'
+        }, {
+            label: 'éducateur', link: 'educateur'
+        }, {
+            label: 'médiation artistique', link: 'mediation-artistique'
+        }, {
+            label: 'sport', link: 'sport'
+        }, {
+            label: 'langues', link: 'teacher', active: true
+        }]
+    },
+    {label: 'Notre charte', link: '/charte'},
+    {label: 'Qui sommes-nous ?', link: '/equipe'},
+    {label: 'Partenaires', link: '/partenaires', disabled: true}
+]
+
+function NavigationElement(props) {
+    const element = props.element;
+    const updateOnPageChange = () => window.scrollTo(0, 0)
+    if (!element) {
+        throw new Error('Invalid navigation element.');
+    }
+    return (
+        <NavLink to={element.link}
+                 onClick={updateOnPageChange}>
+            {element.label}
+        </NavLink>
+    );
+}
 
 class Navigation extends React.Component {
-    navIsTransparent = window.scrollY < 50;
+    TOP_PX = 50;
     show = false;
+    _data;
+
+    isMouseOut = false;
+    isFrontPage = false;
+
 
     constructor(props) {
         super(props);
+        this.isFrontPage = props.isFrontPage;
         this.state = {
-            isFrontPage: props.isFrontPage,
-            navIsTransparent: props.isFrontPage && window.scrollY < 50,
-            show: false
+            navIsTransparent: this.isTransparentValidator(),
+            displayedEntry: false
         };
     }
 
     isTransparentValidator() {
-        return this.state.isFrontPage && window.scrollY < 50;
+        return this.isFrontPage && (window.scrollY < this.TOP_PX) && this.isMouseOut;
     }
 
-    updateNavOnScroll = () => this.setState({navIsTransparent: window.scrollY < this.isTransparentValidator()})
-    updateOnPageChange = () => window.scrollTo(0, 0)
+    updateNavTransparentState = () => this.setState({navIsTransparent: this.isTransparentValidator()})
+
+    componentWillMount() {
+        this._data = this.formatData(data);
+    }
 
     componentDidMount() {
-        window.addEventListener("scroll", this.updateNavOnScroll);
+        window.addEventListener("scroll", this.updateNavTransparentState);
     }
 
     componentWillUnmount() {
-        window.removeEventListener("scroll", this.updateNavOnScroll);
+        window.removeEventListener("scroll", this.updateNavTransparentState);
+    }
+
+    formatData(data) {
+        if (!data) {
+            return []
+        }
+        return data.map(
+            (element) => {
+                const emptyObject = {label: '', link: '', children: []};
+                return Object.assign(emptyObject, element);
+            }
+        )
+    }
+
+    render_sub() {
+        const subNavContClasses = (index) => 'nav-element-sub'
+            + (index === this.state.displayedEntry ? ' displayed' : '')
+            + (!this.state.navIsTransparent ? ' with-background' : '');
+        const navElementClasses = 'nav-element nav-2-selected';
+
+        return this._data.map(
+            (element, index) => (
+                <li className={navElementClasses}
+                    onMouseEnter={() => this.setState({displayedEntry: index})}
+                    onMouseLeave={() => this.setState({displayedEntry: null})}>
+                    <NavigationElement element={element}/>
+                    <ul className={subNavContClasses(index)}>
+                        {element.children.map(
+                            subElement => (<li><NavigationElement element={subElement}/></li>)
+                        )}
+                    </ul>
+                </li>
+            )
+        )
     }
 
     render() {
+        let location = useLocation();
+        console.log('uuuu', location);
         return (
-            <nav className={this.state.navIsTransparent ? 'transparent' : ''}>
+            <nav className={this.state.navIsTransparent ? 'transparent' : ''}
+                 onMouseEnter={() => {this.isMouseOut = false; this.updateNavTransparentState();}}
+                 onMouseLeave={() => {this.isMouseOut = true; this.updateNavTransparentState();}}>
                 <div className="mobile">
                     <button>Open</button>
 
@@ -66,30 +152,7 @@ class Navigation extends React.Component {
 
                         <li id="nav-right">
                             <ul>
-                                <li className={'nav-element nav-2-selected'
-                                        + (this.state.navIsTransparent)}
-                                    onMouseEnter={() => this.setState({show: true})}
-                                    onMouseLeave={() => this.setState({show: false})}>
-                                    <NavLink to="/metiers"
-                                             onClick={this.updateOnPageChange}>Nos métiers</NavLink>
-                                    <ul className={'nav-element-sub'
-                                            + (this.state.show ? ' displayed' : '')
-                                            + (!this.state.navIsTransparent ? ' with-background' : '')}>
-                                        <li><span>AZAZA</span></li>
-                                        <li><span>AZAZA</span></li>
-                                        <li><span>AZAZA</span></li>
-                                    </ul>
-                                </li>
-                                <li className="nav-element">
-                                    <NavLink to="/charte" onClick={this.updateOnPageChange}>Notre charte</NavLink>
-                                </li>
-
-                                <li className="nav-element">
-                                    <NavLink to="/equipe" onClick={this.updateOnPageChange}>Qui sommes-nous ?</NavLink>
-                                </li>
-                                <li className="nav-element">
-                                    <NavLink to="/partenaires" onClick={this.updateOnPageChange}>Partenaires</NavLink>
-                                </li>
+                                {this.render_sub()}
                             </ul>
                         </li>
                     </ul>

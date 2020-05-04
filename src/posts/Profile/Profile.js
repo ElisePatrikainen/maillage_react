@@ -1,12 +1,10 @@
 import React from "react";
 import {PageH2Before, UserPhoto} from "../../layout/Helpers/Helpers";
-import Portrait from "../../assets/images/portrait.jpeg";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPhone, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import "./Profile.css";
 import profiles from "../../assets/data/profiles";
 import {useParams} from "react-router-dom";
-import UserImage from "../../assets/images/user.png";
 
 
 function Profile() {

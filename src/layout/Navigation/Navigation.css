@@ -176,7 +176,7 @@ nav.transparent {
         margin: 0.3rem 0;
     }
 
-    #large-nav-menu ul.nav-element-sub li span:hover {
+    #large-nav-menu ul.nav-element-sub li a:hover {
         border-bottom: 2px solid var(--dark-blue);
     }
 
