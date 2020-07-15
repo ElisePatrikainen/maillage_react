@@ -1,0 +1,24 @@
+#professions {
+    display: flex;
+    justify-content: space-between;
+}
+
+#professions > div {
+    width: 40%;
+    margin-right: 5%;
+}
+
+#professions .section-image img {
+    width: 80%;
+    margin: auto;
+}
+
+#professions button {
+    display: block;
+}
+
+#professions button {
+    background-color: #6286aa;
+    color: white;
+    margin-top: 2rem;
+}

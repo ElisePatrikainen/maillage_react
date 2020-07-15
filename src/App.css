@@ -1,43 +1,93 @@
+:root {
+  --logo-blue: #217dc0;
+  --nav-color: #6a81af;
+  --dark-blue: #1f232f;
+  --titles-main-color: #727b8c;
+  --titles-second-color: #005ea7;
+  --colored-background: #f6f6fc59;
+  --colored-background-greyer: #b7bed124;
+  --front-page-second-background-color: white;
+  --front-page-titles: #343a4d
+}
+
 body {
+  background-color: var(--colored-background);
+}
+
+button {
+  cursor: pointer;
+}
+
+h1, h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
   position: relative;
-  font-family: 'Open-sans', sans-serif;
+  color: var(--titles-main-color);
+  margin-bottom: 3rem;
+  margin-top: 0;
 }
 
-.App {
-  text-align: center;
+h1 {
+  display: inline-block;
+  font-size: 2.5rem;
+  z-index: 2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1::before, .title-underlined::before {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  height: 10px;
+  width: 20px;
+  background-color: #8ea7c16e;
+  background-color: #1576bd38;
+  z-index: -1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1::before {
+  width: 100%;
+  height: 1rem;
+  background-color: #ced9e4;
+  color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.block {
+  display: block;
+}
+
+button:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+button {
+  border-radius: 20px;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
+}
+
+
+.dark {
   color: white;
+  background-color: #1f232f;
 }
 
-.App-link {
-  color: #61dafb;
+.dark:hover {
+  background-color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clear {
+  color: #1f232f;
+  border: 2px solid #1f232f;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.clear:hover {
+  background-color: rgb(203, 203, 203);
 }

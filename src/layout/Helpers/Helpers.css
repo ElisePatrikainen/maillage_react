@@ -1,0 +1,33 @@
+.before-title {
+    font-size: 2rem;
+    position: relative;
+    color: var(--logo-blue);
+    font-weight: bold;
+    margin-right: 1rem;
+    z-index: 1;
+}
+
+
+.user-photo {
+    height: 100%;
+    width: 100%;
+}
+.user-photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.user-photo.default-user-photo svg {
+    font-size: 8rem;
+    color: rgba(167, 167, 167, 0.29);
+    width: 90%;
+    height: 90%;
+    bottom: 0;
+    padding-top: 10%;
+    /* color: white; */
+    /* background-color: #d3e3f0; */
+    position: absolute;
+    z-index: 0;
+    margin: 0 0 0 5%;
+}

@@ -1,14 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import {BrowserRouter as Router, Switch, Route, Link, useLocation} from "react-router-dom";
+import PageBody from "./layout/PageBody/PageBody";
+import FrontPageBody from "./layout/PageBody/FrontPageBody";
+import Navigation from "./layout/Navigation/Navigation";
 
-import Navigation from './layout/Navigation/Navigation';
-import PageBody from './layout/PageBody/PageBody';
-
+function test() {
+    window.scrollTo(0, 0);
+}
 function App() {
   return (
     <div>
-      <PageBody/>
+
+      <Router onEnter={() => {test()}}>
+          <Navigation/>
+        <Switch>
+          <Route path="/:topic" component={PageBody} />
+          <Route exact path="/" component={FrontPageBody} />
+        </Switch>
+      </Router>
     </div>
   );
 }

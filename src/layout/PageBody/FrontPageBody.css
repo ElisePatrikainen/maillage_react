@@ -1,0 +1,18 @@
+#fp-main, footer {
+    position: relative;
+    z-index: 1;
+}
+
+#fp-main {
+    background-color: var(--colored-background-greyer);
+    width: 100%;
+    margin: 0 !important;
+}
+
+#fp-top-cont {
+    position: relative;
+    font-family: 'Open-sans', sans-serif;
+    width: 100%;
+    margin: auto;
+    border-left: #0000004a solid;
+}

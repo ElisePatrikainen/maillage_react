@@ -1,0 +1,71 @@
+
+#section-4 {
+    margin-top: 3rem;
+    clip-path: polygon(0 0, 100% 13%, 100% 91%, 0% 100%);
+    background-color: var(--front-page-second-background-color);
+    padding: 5rem 0;
+}
+
+#section-4 .list-section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#section-4 .list-container {
+    width: 60%;
+}
+
+#section-4 .list-container > div {
+    margin-bottom: 1rem;
+}
+
+#section-4 .list-container h2 {
+    margin-bottom: 0.2rem;
+}
+
+#section-4 .list-button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #445989;
+    margin: 5px;
+    opacity: 0.5;
+    cursor: default;
+}
+
+#section-4 .list-button.active {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#section-4 .list-button.active:hover {
+    background-color: #2d3a5a;
+}
+
+#section-4 .divided-image {
+    position: relative;
+    width: 30%;
+    display: flex;
+}
+
+#section-4 .divided-image img {
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#section-4 .divided-image .dividers-cont {
+    display: flex;
+    justify-content: space-evenly;
+    width: 35%;
+    position: relative;
+    margin-left: 65%;
+}
+
+#section-4 .divided-image .divider {
+    width: 5px;
+    height: 100%;
+    background-color: white;
+}
