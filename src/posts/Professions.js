@@ -39,7 +39,7 @@ function ProfessionsContent() {
             <div className="section-content">
                 <h2>
                     <PageH2Before/>
-                    L'<span className="bold">art thérapeute</span>
+                    L'<span className="bold">art-thérapeute</span>
                 </h2>
                 <div className="section-text">
                     Utilisée dans le champ du soin et de la prévention, l'Art-thérapie est une méthode qui
@@ -47,7 +47,7 @@ function ProfessionsContent() {
                     personnelles par le biais d'une stimulation des capacités créatrices.Elle trouve sa place
                     dans des troubles dépressifs et psychosomatiques, des pathologies plus sévères comme les
                     psychoses et l'autisme et aussi les démences séniles.
-                    <button className="rounded" onClick={() => navigate("art-therapeute")}>
+                    <button className="rounded" onClick={() => navigate("therapeute")}>
                         <FontAwesomeIcon className="icon" icon={faPlusCircle}/>En savoir plus
                     </button>
                 </div>

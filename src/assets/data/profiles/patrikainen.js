@@ -7,7 +7,8 @@ const tag = 'psychologist';
 const photo = Photo;
 const phone = (<span>06 62 60 52 29</span>);
 const mail = (<span>geraldine.patrikainen@gmail.com</span>);
-// todo: add website, linkedIn
+const linkedIn = 'https://www.linkedin.com/in/g%C3%A9raldine-patrikainen-a69518b6';
+const website = 'http://psychologie-toulon.fr/';
 
 const presentation = (
     <div>
@@ -71,6 +72,6 @@ const professionalJourney = (
 );
 
 // todo: function instead of listing
-const patrikainen = {name, profession, tag, photo, phone, mail, presentation, degrees, professionalJourney};
+const patrikainen = {name, profession, tag, photo, phone, mail, linkedIn, website, presentation, degrees, professionalJourney};
 
 export default patrikainen;

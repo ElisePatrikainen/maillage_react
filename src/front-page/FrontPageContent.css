@@ -95,11 +95,6 @@ h1.title-with-background:before {
     margin-right: 1rem;
 }
 
-
-#section-1-buttons-cont button .icon {
-    margin-left: -1rem;
-}
-
 @media (min-width: 600px) {
 
     .with-large-image {

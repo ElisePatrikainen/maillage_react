@@ -1,9 +1,10 @@
 import React from "react";
+import Photo from "../../images/barbier.jpg"
 
 const name = (<span>Kévin Barbier</span>);
-const profession = (<span>Psychologue - psychanalyste</span>);
+const profession = (<span>Psychologue - psychothérapeute</span>);
 const tag = 'psychologist';
-const photo = null;
+const photo = Photo;
 const phone = null;
 const mail = null;
 

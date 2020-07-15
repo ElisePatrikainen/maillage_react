@@ -48,25 +48,22 @@ const cards_data_profiles = [
 
 const list_professions_data = {
     therapy: [{
-        title: 'psychiatre', link: 'psychiatre'
-    }, {
         title: 'psychologue', link: 'psychologue', active: true
     }, {
-        title: 'art thérapeute', link: 'art-therapeute', active: true
+        title: 'thérapeute', link: 'therapeute', active: true
+    },{
+        title: 'psychiatre', link: 'psychiatre'
     }, {
         title: 'ergothérapeute', link: 'ergothérapeute'
     }],
     social_support: [{
+        title: 'soutien scolaire', link: 'teacher', active: true
+    }, {
         title: 'assistante sociale', link: 'assistante-sociale'
     }, {
         title: 'éducateur', link: 'educateur'
     }, {
         title: 'médiation artistique', link: 'mediation-artistique'
-    }],
-    activities: [{
-        title: 'sport', link: 'sport'
-    }, {
-        title: 'langues', link: 'teacher', active: true
     }]
 };
 

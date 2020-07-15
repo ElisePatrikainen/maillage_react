@@ -3,10 +3,10 @@ import {PageH2Before} from "../../layout/Helpers/Helpers";
 import ProfileCards from "../../layout/Cards/ProfileCards";
 
 
-function Psychologists() {
+function Psychologists(props) {
 
     const title = "psychologues";
-
+    console.log(props);
     return (
         <div>
             <div>

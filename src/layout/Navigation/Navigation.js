@@ -6,24 +6,23 @@ import Logo from "../../logo.png";
 const data = [
     {label: 'Nos métiers', link: '/metiers',
         children: [{
-            label: 'psychiatre', link: 'psychiatre'
+            label: 'psychologue', link: '/psychologue', active: true
         }, {
-            label: 'psychologue', link: './psychologue', active: true
+            label: 'thérapeute', link: '/therapeute', active: true
+        },  {
+            label: 'soutien scolaire', link: 'teacher', active: true
         }, {
-            label: 'art thérapeute', link: 'art-therapeute', active: true
+            label: 'psychiatre', link: '/psychiatre'
         }, {
-            label: 'ergothérapeute', link: 'ergothérapeute'
+            label: 'ergothérapeute', link: '/ergothérapeute'
         }, {
-            label: 'assistante sociale', link: 'assistante-sociale'
+            label: 'assistante sociale', link: '/assistante-sociale'
         }, {
-            label: 'éducateur', link: 'educateur'
+            label: 'éducateur', link: '/educateur'
         }, {
-            label: 'médiation artistique', link: 'mediation-artistique'
-        }, {
-            label: 'sport', link: 'sport'
-        }, {
-            label: 'langues', link: 'teacher', active: true
-        }]
+            label: 'médiation artistique', link: '/mediation-artistique'
+        }
+        ]
     },
     {label: 'Notre charte', link: '/charte'},
     {label: 'Qui sommes-nous ?', link: '/equipe'},
@@ -115,8 +114,6 @@ class Navigation extends React.Component {
     }
 
     render() {
-        let location = useLocation();
-        console.log('uuuu', location);
         return (
             <nav className={this.state.navIsTransparent ? 'transparent' : ''}
                  onMouseEnter={() => {this.isMouseOut = false; this.updateNavTransparentState();}}

@@ -5,14 +5,14 @@ import ProfileCards from "../../layout/Cards/ProfileCards";
 
 function ArtTherapist() {
 
-    const title = "art-thérapeutes";
+    const title = "thérapeutes";
 
     return (
         <div>
             <div>
                 <div className="section">
                     <h1>Les {title} Maillage:</h1>
-                    <ProfileCards tag="art-therapist" small={true}/>
+                    <ProfileCards tag="therapist" small={true}/>
                 </div>
 
                 <div className="section colored-background text">

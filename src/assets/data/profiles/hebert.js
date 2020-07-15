@@ -1,10 +1,11 @@
 import React from "react";
-import Photo from "../../images/Geraldine-Patrikainen.jpg";
+import Photo from "../../images/hebert.jpg";
 
 const name = (<span>Falone Hebert</span>);
-const profession = (<span>Professeur Anglais</span>);
+const profession = (<span>Enseignante pédagogique en soutien scolaire</span>);
+const professionShort = (<span>Soutien scolaire</span>);
 const tag = 'teacher';
-const photo = null;
+const photo = Photo;
 const phone = null;
 const mail = null;
 
@@ -30,6 +31,6 @@ const degrees = null;
 const professionalJourney = null;
 
 // todo: function instead of listing
-const hebert = {name, profession, tag, photo, phone, mail, presentation, degrees, professionalJourney};
+const hebert = {name, profession, professionShort, tag, photo, phone, mail, presentation, degrees, professionalJourney};
 
 export default hebert;

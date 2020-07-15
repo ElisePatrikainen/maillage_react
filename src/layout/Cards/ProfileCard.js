@@ -29,7 +29,7 @@ function ProfileCard(props) {
             </div>
             <div className="description">
                 {small ? '' : (<h2>{profile.name}</h2>)}
-                {profile.profession}
+                {profile.professionShort || profile.profession}
             </div>
         </div>
     )

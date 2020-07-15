@@ -15,7 +15,6 @@ function App() {
       <Router onEnter={() => {test()}}>
           <Navigation/>
         <Switch>
-          <Route path="/:topic/:detail" component={PageBody} />
           <Route path="/:topic" component={PageBody} />
           <Route exact path="/" component={FrontPageBody} />
         </Switch>

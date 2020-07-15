@@ -38,13 +38,6 @@ function FPProfessions() {
                         </div>
                     </div>
 
-                    <div>
-                        <h2>Activités :</h2>
-                        <div>
-                            {getProfessions('activities')}
-                        </div>
-                    </div>
-
                 </div>
 
                 <div className="divided-image">
